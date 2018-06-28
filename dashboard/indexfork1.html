@@ -6,8 +6,15 @@
 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel='stylesheet' href='css/font/typicons.min.css' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <!--
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </head>
 
@@ -37,8 +44,21 @@
         -->
 
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Courses<span style=font-size:1em; class="typcn typcn-arrow-sorted-down"</span></a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarCourseDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses<!-- <span style=font-size:1em; class="typcn typcn-arrow-sorted-down"</span> --></a>
+            <ul class="dropdown-menu" aria-labelledby="navbarCourseDropdown">
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Class 9</a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Physics</a>
+                  <a class="dropdown-item" href="#">Chemistry</a>
+                  <a class="dropdown-item" href="#">Mathematics</a>
+                  <a class="dropdown-item" href="#">Biology</a>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Class 10</a></li>
+              <li><a class="dropdown-item" href="#">Class 11</a></li>
+              <li><a class="dropdown-item" href="#">Class 12</a></li>
+            </ul>
             <!-- Make this a multilevel dropdown -->
         </li>
       </ul>
@@ -55,22 +75,28 @@
       <a title="By Google Inc. (google.com) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Google_%22G%22_Logo.svg"><img width="32" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/32px-Google_%22G%22_Logo.svg.png"></a>
 
       </div>
-        <!-- Brand Name -->
+        <!-- Brand Name below-->
         <div class="d-flex align-items-end mt-auto">
           <a href="#">WidgetEduTech</a>
         </div>
         </div>
 
-        <!-- convert these to icons with card & dropdown-->
+        <!-- convert these to icons with (possibly) card & dropdown-->
       <div class="d-flex align-items-end">
         <ul  class="nav nav-pills">
 
-        <li class="nav-item">
-          <a class="" href="#"><span style="font-size: 2em;" class="typcn typcn-bell"</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"><span style="font-size: 2em;" class="typcn typcn-bell"></span></a>
+            <ul class="dropdown-menu">
+              <li></li>
+            </ul>
         </li>
 
-        <li class="nav-item">
-          <a class="" href="#"><span style="font-size: 2em;" class="typcn typcn-cog"></span></a>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false"><span style="font-size: 2em;" class="typcn typcn-cog"></span></a>
+          <ul class="dropdown-menu">
+            <li></li>
+          </ul>
         </li>
           <!-- FLAMMABLE
         <li class="nav-item">

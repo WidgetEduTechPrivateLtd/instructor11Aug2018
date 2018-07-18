@@ -12,13 +12,13 @@
 .dropdown-submenu {
   position: relative;
 }
-.dropdown-submenu>li>a::after {
+li.dropdown-submenu>a::after {
   transform: rotate(-90deg);
   position: absolute;
-
-
+  right: 3px;
+  top: 40%;
 }
-.dropdown-submenu:hover .dropdown-menu .dropdown-submenu:focus .dropdown-menu {
+.dropdown-submenu:hover .dropdown-menu,.dropdown-submenu:focus .dropdown-menu {
   display: flex;
   flex-direction: column;
   position: absolute !important;
@@ -29,7 +29,7 @@
   .dropdown-menu {
     width: 50%;
   }
-  .dropdown-menu>.dropdown-submenu {
-    width: auto
+  .dropdown-menu .dropdown-submenu {
+    width: auto;
   }
 }

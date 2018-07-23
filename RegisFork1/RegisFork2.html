@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/regisInstr.css" type="text/css" media="all">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <style>
 
   input[type=text], input[type=url], input[type=email], input[type=number], input[type=tel], select, textarea{
@@ -68,6 +68,17 @@
     margin-top: 6px;
   }
 
+  .addFieldButton {
+    float: right;
+    margin-bottom: 6px;
+  }
+
+  .removeFieldButton {
+    float: right;
+    margin-top: 6px;
+
+  }
+
   .row:after {
     content: "";
     display: table;
@@ -101,6 +112,8 @@
   }
 
   </style>
+
+
 </head>
 <body class="grad">
 <div>
@@ -110,7 +123,7 @@
 
 
 <div class="container">
-  <form action="#">
+  <form method="post" action="/registerInstructor">
     <div class="row">
       <div class="col-25">
         <label for="fullName">Full Name</label>
@@ -194,14 +207,55 @@
     </div>
 
     <div class="row">
+      <script>
+
+      // js to dynamically add/remove subject fields.
+
+      $(document).ready(function() {
+        var maxFields =15; //maximum input fields allowed
+        var wrapper = $(".inputFieldWrap");
+        var addButton = $(".addFieldButton");
+
+        var fieldCount = 1; //initial number of Fields
+        $(addButton).click( function(e) { //when add button is clicked
+          e.preventDefault();
+          if(fieldCount < maxFields) { //check if less than allowed field
+            fieldCount++;
+            $(wrapper).append('<div class="removeMe"><div class="col-25"></div><div class="col-75"><input type="text" name="subject[]" placeholder="Subject"><a class="removeFieldButton"><span class="glyphicon glyphicon-minus"> Remove</span></a></div></div>'); //add Input field
+          };  //increase fieldcount and add a field
+        });
+
+        $(wrapper).on("click", ".removeFieldButton", function(e) {
+          e.preventDefault();
+          $(this).parents('.removeMe').remove();
+          fieldCount--;
+        }); //remove the specific field count
+
+      });
+
+      </script>
+      <div class="inputFieldWrap">
       <div class="col-25">
         <label>Subjects</label>
       </div>
+      <!--
+      <button class="add_field_button btn btn-info">Add More Fields</button>
+    -->
+
       <div class="col-75">
-        <label class="checkbox-inline"><input type="checkbox" value="Physics">Physics</label>
-        <label class="checkbox-inline"><input type="checkbox" value="Chemistry">Chemistry</label>
-        <label class="checkbox-inline"><input type="checkbox" value="Biology">Biology</label>
-        <label class="checkbox-inline"><input type="checkbox" value="Mathematics">Mathematics</label>
+        <a class="addFieldButton"><span class="glyphicon glyphicon-plus"> Add more subjects</span></a>
+        <input type="text" name="subject[]" placeholder="Subject">
+      </div>
+
+      <!--  UNCOMMENT THIS TO TEST 2 FIELDS WITHOUT CLICKING BUTTONS
+      <div class="removeMe">
+      <div class="col-25"></div>
+      <div class="col-75">
+        <input type="text" name="subject[]" placeholder="Subject">
+        <a class="removeFieldButton"><span class="glyphicon glyphicon-minus"> Remove</span></a>
+      </div>
+      </div>
+      -->
       </div>
     </div>
 
@@ -216,7 +270,7 @@
         <label class="checkbox-inline"><input type="checkbox" value="XII">XII</label>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-25">
         <label>Language Proficiency</label>
@@ -250,5 +304,6 @@
     <div class="row">
       <button class="loginBtn">Already an Instructor? <b><em>Login</em></b></button>
     </div>
+
 </body>
 </html>

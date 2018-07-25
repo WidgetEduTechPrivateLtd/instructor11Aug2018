@@ -7,9 +7,16 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var instructorRouter = require('./routes/instructor');
 
 var app = express();
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://Zircoz:z1rPass@ds247061.mlab.com:47061/instructor';
+mongoose.connect(mongoDB, { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error: '));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/instructor', instructorRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

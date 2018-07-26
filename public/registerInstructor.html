@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css" type="text/css" media="all">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/regisInstr.css" type="text/css" media="all">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -54,6 +55,8 @@
     margin-top: 20px;
     margin-bottom: 30px;
     opacity: 0.85;
+    align: center;
+    width: 78%;
   }
 
   .col-25 {
@@ -115,12 +118,12 @@
 
 
 </head>
+
 <body class="grad">
 <div>
   <div class="fixed-top" style="background-color: #aef9df;" >
   <h1 class="fixed-top">Instructor Registeration</h1>
 </div>
-
 
 <div class="container">
   <form method="post" action="http://localhost:3000/instructor/">
@@ -301,8 +304,10 @@
     <div class="row">
       <input type="submit" value="Register">
     </div>
+  </form>
+
     <div class="row">
-      <button class="loginBtn">Already an Instructor? <b><em>Login</em></b></button>
+      <button class="loginBtn" href="/login">Already an Instructor? <b>Login <span class="glyphicon glyphicon-log-in"></span></b></button>
     </div>
 
 </body>

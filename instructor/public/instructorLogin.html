@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+<title>Instructor Login Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
+-->
+<link href="file:///css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
+
+<style>
+
+body {
+  background: url("./images/teac.jpg") center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Mukta Mahee', sans-serif;
+
+}
+form {
+  border: 3px solid transparent;
+  padding: 10px;
+  opacity: 0.8;
+
+}
+h1{
+  text-align: center;
+}
+.content {
+    max-width: 480px;
+    margin: 5em auto;
+}
+.content-inside {
+  padding: 3.5em 3em 1em;
+  background: rgba(204, 34, 34, 0.5);
+  border-radius: 1px 1px 1px 0px;
+  border-left: 5px solid #cc2222;
+  border-bottom: 5px solid #cc2222;
+  margin: 0 lem;
+}
+
+.field-input {
+  padding: 15px 15px;
+  font-size: 16px;
+  width: 100%;
+  font-family: 'Mukta Mahee', sans-serif;
+  outline: none;
+}
+
+.field-text {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.field-text-color {
+  color: #000000;
+}
+
+.field-input input[type="submit"] {
+  background: #00ad28;
+  border: 1px 1px 1px 1px;
+  color: #fff;
+  padding: 12px 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Mukta Mahee', sans-serif;
+  cursor: pointer;
+  transition: 0.5s all;
+  width: 25%;
+}
+
+.field-input input[type=submit]:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+<h1>Teacher Login</h1>
+<div class="content">
+<div class="content-inside">
+<form action="/loginInstructor" method="post">
+<div class="field-input">
+<div class="field-text">
+<label for="email" class="field-text-color"><b>Email</b></label><br>
+</div>
+<input type="text" placeholder="Email" name="email" required><br>
+</div>
+<div class="field-input">
+<div class="field-text">
+<label for="password" class="field-text-color"><b>Password</b></label><br>
+</div>
+<input type="password" placeholder="Password" name="password" required><br>
+</div>
+<div class="field-input">
+<input type="submit" value="Login">
+</div>
+
+<div class="field-input">
+  <div class="field-text">
+    <label class="field-text-color">Or login with:</label>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary" href="/facebook"> Google </button>
+    <button type="button" class="btn btn-primary" href="/twitter"> Facebook </button>
+    <button type="button" class="btn btn-primary" href="/google"> Twitter </button>
+  </div>
+</div>
+</form>
+</div>
+</div>
+
+
+</body>
+</html>

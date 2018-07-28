@@ -9,6 +9,7 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
+
 router.get('/facebook', passportFacebook.authenticate('facebook'));
 router.get('facebook/callback', passportFacebook.authenticate('facebook', { failureRedirect: "/loginInstructor"}),
 function(req, res) {
@@ -21,7 +22,7 @@ router.get('/twitter', passportTwitter.authenticate('twitter'));
 router.get('/twitter/callback', passportTwitter.authenticate('twitter', { failureRedirect: '/loginInstructor'}),
 function(req, res) {
   //Successful authentication, redirect home
-  res.redirect('/');
+  res.redirect('/dashboard');
 });
 
 router.get('/google', passportGoogle.authenticate( 'google', { scope: 'https://www.google.com/m8/feeds'}));

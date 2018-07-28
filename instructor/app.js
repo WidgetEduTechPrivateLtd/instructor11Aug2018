@@ -10,7 +10,8 @@ var session = require('express-session');
 
 
 var indexRouter = require('./routes/index');
-var instructorRouter = require('./routes/instructor');
+//var instructorRouter = require('./routes/instructor');
+var authRouter = require('./routes/auth');
 
 var app = express();
 var mongoose = require('mongoose');
@@ -32,7 +33,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/instructor', instructorRouter);
+//app.use('/instructor', instructorRouter);
+app.use('/auth', authRouter);
 
 app.use(session({
   secret: 's3cr3t',

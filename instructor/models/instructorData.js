@@ -7,7 +7,7 @@ var instructorDetailsSchema = new Schema(
     fullName: {type: String, required: true, trim: true, maxlength: 100},
     email: {type: String, required: true, trim: true}, //possibly an id
     mobileNumber: {type: Number, required: true, trim: true, minlength: 10, maxlength: 13,  },
-    address: [type: String, minlength: 1, required: true], //array of multiple lines
+    address: [{type: String, minlength: 1, required: true}], //array of multiple lines
     city: {type: String, required: true, trim: true, maxlength: 50},
     pinCode: {type: Number, required: true, trim: true, min: 000001, max: 999999},
     state: {type: String, required: true, trim: true, maxlenth: 50},
@@ -16,7 +16,8 @@ var instructorDetailsSchema = new Schema(
     subjects: [String], //dynamic fields.
     class: [String], //checkboxes
     language: [String], //checkboxes
-    resume: {type: String, required: true, }
+    resume: {type: String, required: true },
+    approval: {type: Boolean}
   }
 );
 

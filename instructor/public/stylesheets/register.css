@@ -1,0 +1,110 @@
+input[type=text], input[type=url], input[type=email], input[type=number], input[type=tel], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.loginBtn {
+  margin-top: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border: none;
+  color: #ff4d4d;
+  float: right;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  margin-top: 12px;
+  background-color: #5fb962;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  padding-top: 10px;
+  width: 20%;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  opacity: 0.85;
+  align: center;
+  width: 78%;
+  margin-top: 11em;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.addFieldButton {
+  float: right;
+  margin-bottom: 6px;
+}
+
+.removeFieldButton {
+  float: right;
+  margin-top: 6px;
+
+}
+
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.body {
+  margin-top:
+}
+
+.grad {
+  background: linear-gradient(#1EAE98,#D8B5FF);
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgb(0, 51, 204);
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.row {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

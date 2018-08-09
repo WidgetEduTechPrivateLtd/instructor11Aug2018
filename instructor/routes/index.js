@@ -1,18 +1,20 @@
 var express = require('express');
 var router = express.Router();
+var indexController = require('../controllers/controllerIndex');
 
 /* GET home page. */
-router.get('/dashboard', ensureAuthenticated, function(req, res, next) {
-  res.render('/instructorDashboard');
-});
+router.get('/', indexController.index_get);
 
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/loginInstructor')
-};
+router.get('/login', indexController.login_get);
 
-router.get('/instructorRegisteration', function(req, res) {
-  res.render('instructorRegis');
-});
+router.post('/login', indexController.login_post);
+
+router.get('/register', indexController.register_get);
+
+router.post('/register', indexController.register_post);
+
+router.get('/logout', indexController.logout_get);
+
+router.get('/ping', indexController.ping);
 
 module.exports = router;

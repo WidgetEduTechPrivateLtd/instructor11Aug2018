@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <link rel="stylesheet" href="/stylesheets/login.css" type="text/css" media="all">
+    <link href="file:///css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet">
     <% include ./partials/head %>
+    <style>
+    body {
+      font-family: 'Mukta Mahee', sans-serif;
+
+    }
+    </style>
 
   </head>
-  <body>
+  <body class="grad">
+
   <% include ./partials/header %>
-  
+
+  <div class="content">
+  <div class="content-inside">
+  <form action="/loginInstructor" method="post">
+  <div class="field-input">
+  <div class="field-text">
+  <label for="email" class="field-text-color"><b>Email</b></label><br>
+  </div>
+  <input type="text" placeholder="Email" name="email" required><br>
+  </div>
+  <div class="field-input">
+  <div class="field-text">
+  <label for="password" class="field-text-color"><b>Password</b></label><br>
+  </div>
+  <input type="password" placeholder="Password" name="password" required><br>
+  </div>
+  <div class="field-input">
+  <input type="submit" value="Login">
+  </div>
+
+  <div class="field-input">
+    <div class="field-text">
+      <label class="field-text-color">Or login with:</label>
+    </div>
+    <div class="btn-group">
+      <a href="/auth/facebook"><button type="button" class="btn btn-primary"> Google </button></a>
+      <a href="/auth/twitter"><button type="button" class="btn btn-primary" href="/twitter"> Facebook </button></a>
+      <a href="/auth/google"><button type="button" class="btn btn-primary" href="/google"> Twitter </button></a>
+    </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  <% include ./partials/footer %>
+</body>
+</html>

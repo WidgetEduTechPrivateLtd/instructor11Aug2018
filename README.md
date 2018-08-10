@@ -32,11 +32,11 @@ localhost:5000/instructor --> this SHOULD be the default path for all functional
 
 localhost:5000/instructor/dashboard --> this should render the instructor dashboard page with basic layout **
 
-* & ** are explained in further topics
+\* & ** are explained in further topics
 
 ## Assumptions/expectations and Must-Dos for other modules:
 
-* This is just for this module means replacing this with appropiate paths from student module is expected. In fact, this can even be completely replaced as students won't need going to instructor part and instructor can register from any appropiate button placed in student module.
+\* This is just for this module means replacing this with appropiate paths from student module is expected. In fact, this can even be completely replaced as students won't need going to instructor part and instructor can register from any appropiate button placed in student module.
 
 ** This has just the sidebar(menu) and header footer done. All else is supposed to be added.
 

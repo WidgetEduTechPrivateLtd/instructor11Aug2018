@@ -47,4 +47,6 @@ Assumptions & must-do:
 3. Replacing the company logo in /views/partials/header.ejs with real logo.
 4. Nodemailer details will be filled when needed with an appropiate credential.
 
+Note: Main app is in instructor folder. /public only contains the raw static html,css files which were used to design the views. Editing these will not affect views as they use /instructor/public for static files.
+
 For any queries or suggestions, email me at zircoz@outlook.com . Happy to help out.

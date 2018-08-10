@@ -70,10 +70,32 @@ app.use(express.static(path.join(__dirname,"public")));
 
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
+//for protecting instructor space
+var instructor = require("./models/instructorData.js");
+
+function checkUserType (req, res) {
+  if (req.user.userType === 'instructor') {
+    var approval = instructor.find({email: req.user.email});
+    if (approval == true){
+      return true;
+    } else {
+      return false;
+    }
+  };
+};
+
+function checkAuthentication(req, res, next){
+  if(req.isAuthenticated() && checkUserType()) {
+    next();
+  } else {
+    res.redirect('/login');
+  }
+};
+
 
 
 app.use('/', indexRouter);
-app.use('/instructor', usersRouter);
+app.use('/instructor', checkAuthentication, usersRouter);
 app.use('/auth', authRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -14,7 +14,7 @@ exports.login_get = function(req, res) {
 };
 
 exports.login_post = function(req, res) {
-  passport.authenticate('local', { successRedirect: '/dashboard', failureRedirect: '/login'});
+  passport.authenticate('local', { successRedirect: '/instructor/dashboard', failureRedirect: '/login'});
 };
 
 exports.logout_get = function(req, res) {

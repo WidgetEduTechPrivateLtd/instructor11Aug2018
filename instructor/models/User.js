@@ -11,6 +11,7 @@ var UserSchema = new mongoose.Schema(
   }
 );
 
+UserSchema.statics.findOrCreate = require("find-or-create");
 UserSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('User', UserSchema);

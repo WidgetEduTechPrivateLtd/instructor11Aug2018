@@ -8,7 +8,7 @@ passport.use(new GoogleStrategy({
   callbackURL: "http://localhost:3000/auth/google/callback"
 },
 function(accessToken, refreshToken, profile, done) {
-  User.findOrCreate({ userid: profile.id }, { name: profile.displayName, userid: profile.id }, function (err, user) {
+  User.findOrCreate({ userid: profile.id }, { name: profile.displayName, userid: profile.id, email: profile.email }, function (err, user) {
     return done(err, user);
   });
 }));

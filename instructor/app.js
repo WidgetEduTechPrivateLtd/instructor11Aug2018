@@ -92,7 +92,9 @@ function checkAuthentication(req, res, next){
   }
 };
 
-
+app.listen("3000", "localhost", function(){
+   console.log("The App Server Has Started!");
+});
 
 app.use('/', indexRouter);
 app.use('/instructor', checkAuthentication, usersRouter);

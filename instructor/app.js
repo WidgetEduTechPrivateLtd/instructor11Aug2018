@@ -92,7 +92,7 @@ function checkAuthentication(req, res, next){
   }
 };
 
-app.listen("3000", "localhost", function(){
+app.listen("5000", "localhost", function(){
    console.log("The App Server Has Started!");
 });
 
